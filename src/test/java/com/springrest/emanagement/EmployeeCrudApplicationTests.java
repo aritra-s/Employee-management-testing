@@ -25,7 +25,6 @@ import com.springrest.emanagement.service.EmployeeServiceImpl;
 @SpringBootTest
 class EmployeeCrudApplicationTests {
 
-	
 
 	@Autowired
 	private EmployeeServiceImpl eService;
