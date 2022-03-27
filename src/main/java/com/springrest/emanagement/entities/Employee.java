@@ -47,34 +47,6 @@ public class Employee {
 				+ employeeDepartment + "]";
 	}
 	
-	@Override
-	public boolean equals(Object obj) {
-		 if (obj == this) {
-	            return true;
-	        }
-		 
-		 if (obj == null)
-			    return false;
-
-			  if (this.getClass() != obj.getClass())
-			    return false;
-			  
-		 Employee employee=(Employee)obj;
-		 
-		 if (!(obj instanceof Employee)) {
-	            return false;
-		 }
-	         
-	        
-	        return Integer.compare(this.employeeId, employee.employeeId) == 0
-	                && this.employeeName.equals(employee.employeeName) ;
-		 
-	}
-
-	@Override
-	public int hashCode() {
-		return super.hashCode();
-	}
 	
 	
 	
