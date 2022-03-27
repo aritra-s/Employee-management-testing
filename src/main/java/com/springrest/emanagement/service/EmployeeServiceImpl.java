@@ -33,9 +33,9 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 
 	@Override
-	public void addEmployee(Employee employee) {
+	public Employee addEmployee(Employee employee) {
 		employeeDao.save(employee);
-		
+		return employee;
 	}
 
 

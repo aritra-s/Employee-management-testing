@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//import com.employee.emanagement.entity.Employee;
+
 @Entity
 @Table(name="Employee_records")
 public class Employee {
@@ -44,5 +46,36 @@ public class Employee {
 		return "Employee [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeDepartment="
 				+ employeeDepartment + "]";
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		 if (obj == this) {
+	            return true;
+	        }
+		 
+		 if (obj == null)
+			    return false;
+
+			  if (this.getClass() != obj.getClass())
+			    return false;
+			  
+		 Employee employee=(Employee)obj;
+		 
+		 if (!(obj instanceof Employee)) {
+	            return false;
+		 }
+	         
+	        
+	        return Integer.compare(this.employeeId, employee.employeeId) == 0
+	                && this.employeeName.equals(employee.employeeName) ;
+		 
+	}
+
+	@Override
+	public int hashCode() {
+		return super.hashCode();
+	}
+	
+	
 	
 }
